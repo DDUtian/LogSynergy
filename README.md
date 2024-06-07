@@ -1,5 +1,8 @@
 # Bridging the Gap: LLM-Powered Multi-Source Transfer Learning for Log Anomaly Detection in New Software Systems
 
+## Abstract
+For large IT companies, maintaining multiple software systems presents considerable complexity. Logs are invaluable for depicting the state of these systems, making log-based anomaly detection crucial for ensuring system reliability. Current log anomaly detection methods typically require extensive log data to train unsupervised models or numerous labeled anomalies for supervised models, limiting their rapid applicability to newly deployed software systems.This paper proposes LogSynergy, a novel framework for log anomaly detection leveraging multi-source transfer learning. LogSynergy facilitates the transfer of anomaly detection knowledge from logs across multiple mature systems, enabling efficient deployment with minimal logs from new systems. We propose an LLM-based event interpretation method to minimize log style discrepancies among different systems. Moreover, to extract transferable features across various systems, we present a feature disentanglement method, enhancing the generalizability of the detection process. Evaluated on three real-world log datasets from a Top-tier global IT company and three public datasets, LogSynergy demonstrates superior performance compared to existing methods.
+
 ## Project Structure
 ```
 ├─run         # LogSynergy main entrance.
