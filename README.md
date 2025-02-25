@@ -1,7 +1,7 @@
 # Bridging the Gap: LLM-Powered Multi-Source Transfer Learning for Log Anomaly Detection in New Software Systems
 
 ## Abstract
-For large IT companies, maintaining multiple software systems presents considerable complexity. Logs are invaluable for depicting the state of these systems, making log-based anomaly detection crucial for ensuring system reliability. Current log anomaly detection methods typically require extensive log data to train unsupervised models or numerous labeled anomalies for supervised models, limiting their rapid applicability to newly deployed software systems.This paper proposes LogSynergy, a novel framework for log anomaly detection leveraging multi-source transfer learning. LogSynergy facilitates the transfer of anomaly detection knowledge from logs across multiple mature systems, enabling efficient deployment with minimal logs from new systems. We propose an LLM-based event interpretation method to minimize log style discrepancies among different systems. Moreover, to extract transferable features across various systems, we present a feature disentanglement method, enhancing the generalizability of the detection process. Evaluated on three real-world log datasets from a Top-tier global IT company and three public datasets, LogSynergy demonstrates superior performance compared to existing methods.
+For large IT companies, maintaining numerous software systems presents considerable complexity. Logs are invaluable for depicting the state of systems, making log-based anomaly detection crucial for ensuring system reliability. Existing methods require extensive log data for training, hindering their rapid deployment for new systems. Cross-system log anomaly detection methods attempt to transfer knowledge from mature systems to new ones but often struggle with syntax differences and system-specific knowledge, which hinders their effectiveness. To address these issues, this paper proposes LogSynergy, a novel transfer learning-based log anomaly detection framework. LogSynergy employs (1) LLM-based event interpretation (LEI) to standardize log syntax across different systems, and (2) system-unified feature extraction (SUFE) to disentangle system-specific features from system-unified features. These bridge the gap among different systems and enhance LogSynergy's generalizability. LogSynergy has been deployed in the production environment of a top-tier global Internet Service Provider (ISP), where it was evaluated on three real-world datasets. Additionally, we conducted evaluations on three public datasets. The results demonstrate that LogSynergy significantly outperforms existing methods. It achieves F1-scores over 89% on the real-world datasets and over 83% on the public datasets, using only 5000 labeled log sequences from the new system. These results underscore LogSynergy's effectiveness in rapidly deploying anomaly detection models for new systems.
 
 ## Project Structure
 ```
@@ -38,5 +38,5 @@ Main parameters are described as follows:
 ### To run and test the code
 ```shell
 python run/train.py
-pyhton run/test.py
+pyhton run/eval.py
 ```
